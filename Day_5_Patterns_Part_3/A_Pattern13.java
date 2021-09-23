@@ -6,7 +6,6 @@ public class A_Pattern13 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int rows = sc.nextInt();
-		int val = 1;
 		int nck = 1;
 		for (int n = 0; n < rows; n++) {
 			nck = 1;
