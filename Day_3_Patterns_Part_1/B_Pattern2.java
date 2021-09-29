@@ -1,7 +1,5 @@
 package Day_3_Patterns_Part_1;
-
 import java.util.Scanner;
-
 public class B_Pattern2 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);

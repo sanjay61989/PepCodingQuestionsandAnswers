@@ -59,6 +59,7 @@ public class G_AllProgramsCombines {
 		for (int i = 0; i < s.length(); i++) {
 			System.out.println(s.charAt(i));
 		}
+		
 	}
 
 	static void PrintDigitsInANumberMethod3UsingRecursion(int number) {

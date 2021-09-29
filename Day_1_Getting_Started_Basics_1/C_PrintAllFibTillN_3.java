@@ -2,8 +2,6 @@ package Day_1_Getting_Started_Basics_1;
 
 import java.util.*;
 
-import Utilities.Utilities;
-
 public class C_PrintAllFibTillN_3  {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
@@ -11,7 +9,6 @@ public class C_PrintAllFibTillN_3  {
 	}
 	
 	static void PrintFibonacciNumbersUptoValue_N(int n) {
-		System.out.println("Printing Fibonacci Numbers Upto Value N");
 		int a = 0;
 		int b = 1;
 		int c = 0;
@@ -21,6 +18,5 @@ public class C_PrintAllFibTillN_3  {
 			a = b;
 			b = c;
 		}
-		Utilities.print("\n");
 	}
 }
