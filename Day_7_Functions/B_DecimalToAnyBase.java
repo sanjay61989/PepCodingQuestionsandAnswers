@@ -2,7 +2,7 @@ package Day_7_Functions;
 
 import java.util.Scanner;
 
-public class DecimalToAnyBase {
+public class B_DecimalToAnyBase {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
@@ -12,19 +12,19 @@ public class DecimalToAnyBase {
 		System.out.println(dn);
 	}
 
-	public static int getDecimalInBase(int n, int b) {
-		int ans = 0;
-
-		int p = 1; // 10 ^ 0
+	private static int getDecimalInBase(int n, int b) {
+		// TODO Auto-generated method stub
+		int rv = 0;
+		int d = 0;
+		int p = 1;
 		while (n > 0) {
-			int rem = n % b;
+			d = n % b;
 			n = n / b;
 
-			ans = ans + rem * p;
+			rv = rv + (d * p);
 			p = p * 10;
 		}
-
-		return ans;
+		return rv;
 	}
 
 }
