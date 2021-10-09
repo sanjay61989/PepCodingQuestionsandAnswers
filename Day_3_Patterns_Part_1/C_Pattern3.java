@@ -1,5 +1,4 @@
 package Day_3_Patterns_Part_1;
-
 import java.util.Scanner;
 
 public class C_Pattern3 {

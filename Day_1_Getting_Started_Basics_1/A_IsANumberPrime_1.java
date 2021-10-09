@@ -19,7 +19,7 @@ public class A_IsANumberPrime_1 {
 				break;
 			}
 		}
-		if (flag ==0) {
+		if (flag == 0) {
 			System.out.println("prime");
 		} else {
 			System.out.println("not prime");

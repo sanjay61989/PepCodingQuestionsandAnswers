@@ -1,5 +1,6 @@
 package Day_2_Getting_Started_Basics_2;
 
+
 import java.util.*;
 
 public class C_GCDAndLCM {

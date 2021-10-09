@@ -1,8 +1,5 @@
 package Day_1_Getting_Started_Basics_1;
 
-import Utilities.*;
-import java.util.*;
-
 import java.util.*;
 
 public class B_PrintAllPrimesTillN_2  {

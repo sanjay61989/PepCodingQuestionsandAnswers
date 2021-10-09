@@ -2,8 +2,6 @@ package Day_1_Getting_Started_Basics_1;
 
 import java.util.Scanner;
 
-import Utilities.Utilities;
-
 public class D_CountDigitsInANumber_4  {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
@@ -12,7 +10,7 @@ public class D_CountDigitsInANumber_4  {
 	}
 	
 	static void CountDigitsInANumber(int number) {
-		System.out.println("Count Digits In A Number");
+		
 		int c = 0;
 		while (number != 0) {
 			number = number / 10;

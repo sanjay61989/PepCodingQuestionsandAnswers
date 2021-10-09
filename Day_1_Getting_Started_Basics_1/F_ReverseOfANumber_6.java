@@ -8,12 +8,13 @@ public class F_ReverseOfANumber_6 {
 		int n = s.nextInt();
 		ReverseNumber(n);
 	}
+
 	static void ReverseNumber(int n) {
-		int temp=0;
-		while(n!=0) {
-			temp=n%10;
+		int temp = 0;
+		while (n != 0) {
+			temp = n % 10;
 			System.out.println(temp);
-			n=n/10;
+			n = n / 10;
 		}
 	}
 }
