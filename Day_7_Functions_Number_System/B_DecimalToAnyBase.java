@@ -1,4 +1,4 @@
-package Day_7_Functions;
+package Day_7_Functions_Number_System;
 
 import java.util.Scanner;
 
