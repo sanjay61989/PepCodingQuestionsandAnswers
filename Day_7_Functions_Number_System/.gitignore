@@ -1,6 +1,7 @@
-/DecimalToAnyBase.class
-/DigitFrequency.class
 /A_DigitFrequency.class
 /B_DecimalToAnyBase.class
 /C_AnyBaseToDecimal.class
 /D_AnyBaseToAnyBase.class
+/E_AnyBaseAddition.class
+/F_AnyBaseSubtraction.class
+/G_AnyBaseMultiplication.class
