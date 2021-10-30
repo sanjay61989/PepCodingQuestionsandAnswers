@@ -3,7 +3,7 @@ package Day_12_Recursion;
 import java.io.*;
 import java.util.*;
 
-public class E_PowerLinear2 {
+public class E_PowerLinearlogarithmic {
 
 	public static void main(String[] args) throws Exception {
 		// write your code here

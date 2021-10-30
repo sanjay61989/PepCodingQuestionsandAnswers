@@ -1,18 +1,19 @@
-package Day_04_Patterns_Part_2;
+package Day_03_Patterns_Part_1;
 
 import java.util.*;
 
-public class B_Pattern8 {
+public class A_Pattern7 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int nosp = n - 1;
 		for (int i = 1; i <= n; i++) {
-			for (int j = 1; j <= nosp; j++) {
-				System.out.print("\t");
+			for (int j = 1; j <= i; j++) {
+				if (i == j) {
+					System.out.print("*");
+				} else {
+					System.out.print("\t");
+				}
 			}
-			System.out.print("*");
-			nosp--;
 			System.out.println();
 		}
 	}
@@ -22,9 +23,9 @@ Sample Input
 5
 
 Sample Output
-				*	
-			*		
+*	
+	*		
 		*			
-	*				
-*
+			*				
+				*
 */

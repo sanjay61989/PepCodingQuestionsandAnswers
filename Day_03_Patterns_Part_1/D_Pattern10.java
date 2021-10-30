@@ -1,4 +1,4 @@
-package Day_04_Patterns_Part_2;
+package Day_03_Patterns_Part_1;
 
 import java.util.*;
 
