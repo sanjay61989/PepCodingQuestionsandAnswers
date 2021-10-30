@@ -1,0 +1,5 @@
+-Dfile.encoding=Cp1252
+-classpath
+"G:\\My Drive\\PepCodingQuestionsandAnswers"
+-XX:+ShowCodeDetailsInExceptionMessages
+Day_10_2D_Arrays.G_RingRotate
