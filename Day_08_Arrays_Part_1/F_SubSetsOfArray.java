@@ -1,4 +1,4 @@
-package Day_09_Arrays_Part_2;
+package Day_08_Arrays_Part_1;
 
 import java.util.Scanner;
 
