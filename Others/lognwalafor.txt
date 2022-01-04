@@ -1,0 +1,26 @@
+for(int i = 1; i <= n; i++){
+    // do some work k
+}
+T(n) = k + T(n - 1) => T(n) is proportional to n
+
+
+for(int i = n; i >= 1; i--){
+    // do work
+}
+
+T(n) = k + T(n - 1) => T(n) is proportional to n
+
+
+// The tricky for loop1
+for(int i = n; i >= 1; i = i / 2){
+    // do some work k
+}
+T(n) = k + T(n/2) => T(n) is proportional to log(n)
+
+// The tricky for loop2
+for(int i = 1; i <= n; i = i * 2){
+    // do some work k
+}
+
+T(n) = kx, where x is the number of eqns => T(n) is proportional to logn
+

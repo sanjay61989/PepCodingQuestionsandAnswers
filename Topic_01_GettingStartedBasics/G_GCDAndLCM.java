@@ -1,8 +1,6 @@
 package Topic_01_GettingStartedBasics;
 
-
 import java.util.*;
-
 public class G_GCDAndLCM {
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);

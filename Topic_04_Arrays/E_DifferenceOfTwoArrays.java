@@ -1,11 +1,8 @@
 package Topic_04_Arrays;
-
 import java.util.*;
-
 public class E_DifferenceOfTwoArrays {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-
 		int n1 = s.nextInt();
 		int[] a = new int[n1];
 		for (int i = 0; i < n1; i++) {

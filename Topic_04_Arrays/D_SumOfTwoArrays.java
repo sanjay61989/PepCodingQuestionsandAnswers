@@ -1,7 +1,6 @@
 package Topic_04_Arrays;
 
 import java.util.*;
-
 public class D_SumOfTwoArrays {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
@@ -47,5 +46,4 @@ public class D_SumOfTwoArrays {
 			System.out.println(ele);
 		}
 	}
-
 }

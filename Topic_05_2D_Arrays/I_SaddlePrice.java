@@ -17,7 +17,7 @@ public class I_SaddlePrice {
 
 		//traversing row by row and finding the least element column index and then checking in that 
 		//column if there is any element greater than this or not.
-		
+
 		for (int i = 0; i < ar.length; i++) {
 
 			int lci = 0;

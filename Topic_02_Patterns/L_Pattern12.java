@@ -4,26 +4,26 @@ import java.util.*;
 
 public class L_Pattern12 {
 
-  public static void main(String[] args) {
-    Scanner scn = new Scanner(System.in);
-    int n = scn.nextInt();
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
 
-    // write ur code here
-    int nst = 1;
-    int a = 0;
-    int b = 1;
-    for(int i = 1; i <= n; i++){
-        for(int j = 1; j <= nst; j++){
-            System.out.print(a + "\t");
-            int c = a + b;
-            a = b;
-            b = c;
-        }
-        System.out.println();
-        nst++;
-    }
+		// write ur code here
+		int nst = 1;
+		int a = 0;
+		int b = 1;
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= nst; j++) {
+				System.out.print(a + "\t");
+				int c = a + b;
+				a = b;
+				b = c;
+			}
+			System.out.println();
+			nst++;
+		}
 
-  }
+	}
 }
 /*
 

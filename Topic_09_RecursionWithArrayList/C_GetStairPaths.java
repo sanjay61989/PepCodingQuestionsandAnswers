@@ -39,3 +39,10 @@ public class C_GetStairPaths {
 		return paths;
 	}
 }
+/*
+Sample Output for n=3
+[111, 12, 21, 3]
+
+Sample Output for n=5
+[11111, 1112, 1121, 113, 1211, 122, 131, 2111, 212, 221, 23, 311, 32]
+ */

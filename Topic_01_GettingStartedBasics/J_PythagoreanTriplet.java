@@ -1,9 +1,7 @@
 package Topic_01_GettingStartedBasics;
 
 import java.util.*;
-
 public class J_PythagoreanTriplet {
-
 	public static void main(String[] args) {
 		// write your code here
 		Scanner scn = new Scanner(System.in);
@@ -12,12 +10,8 @@ public class J_PythagoreanTriplet {
 		int c = scn.nextInt();
 
 		int max = a;
-		if (b > max) {
-			max = b;
-		}
-		if (c > max) {
-			max = c;
-		}
+		max = b > max ? b : a;
+		max = c > max ? c : a;		
 
 		if (max == a) {
 			if ((a * a) == (b * b) + (c * c)) {

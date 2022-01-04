@@ -1,7 +1,6 @@
 package Topic_01_GettingStartedBasics;
 
 import java.util.Scanner;
-
 public class A_IsANumberPrime_1 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
