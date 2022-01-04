@@ -15,7 +15,7 @@ public class S_Pattern19 {
 						System.out.print("\t");
 					}
 				}
-				if (i > 1 && i <= n / 2 ) {
+				if (i > 1 && i <= n / 2) {
 					if (j == n / 2 + 1 || j == n) {
 						System.out.print("*\t");
 					} else {
@@ -47,12 +47,12 @@ public class S_Pattern19 {
 
 /*
 For n=7
-*   *   *   *	 		*               //4
+*   *   *   *			*				//4
 			*			*				//2
 			*			*				//2
 *	*	*	*	*	*	*				//7
-*			*							//2
-*			*							//2
+*			*		     				//2
+*			*						    //2
 *			*   *   *   *				//4
 
 for n=9

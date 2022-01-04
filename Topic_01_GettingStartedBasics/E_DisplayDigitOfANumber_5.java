@@ -1,7 +1,6 @@
 package Topic_01_GettingStartedBasics;
 
 import java.util.*;
-
 public class E_DisplayDigitOfANumber_5 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

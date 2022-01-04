@@ -1,7 +1,6 @@
 package Topic_04_Arrays;
 
 import java.util.Scanner;
-
 public class C_InvertedBarChartUsingArrays {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);

@@ -1,7 +1,6 @@
 package Topic_01_GettingStartedBasics;
 
 import java.util.*;
-
 public class C_PrintAllFibTillN_3  {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);

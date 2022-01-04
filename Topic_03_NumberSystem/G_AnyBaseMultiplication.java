@@ -29,10 +29,7 @@ public class G_AnyBaseMultiplication {
 	}
 
 	public static int getProducts(int b, int n1, int d2) {
-		int rv = 0;
-		int p = 1;
-		int d = 0;
-		int c = 0;
+		int rv = 0, p = 1, d = 0, c = 0;
 		while (n1 > 0 || c > 0) {
 			int d1 = n1 % 10;
 			d = d1 * d2 + c;
@@ -41,7 +38,7 @@ public class G_AnyBaseMultiplication {
 				d = d % b;
 			} else {
 				c = 0;
-				d = d ;
+				d = d;
 			}
 			rv = rv + d * p;
 			n1 = n1 / 10;

@@ -17,7 +17,7 @@ public class H_StateOfWakanda_2 {
 	private static int[][] takeInput() {
 		Scanner scn = new Scanner(System.in);
 		int r1 = scn.nextInt();
-//		int c1 = scn.nextInt();
+		//		int c1 = scn.nextInt();
 		int[][] a = new int[r1][r1];
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[0].length; j++) {
