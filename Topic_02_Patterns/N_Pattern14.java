@@ -4,17 +4,17 @@ import java.util.*;
 
 public class N_Pattern14 {
 
-  public static void main(String[] args) {
-    Scanner scn = new Scanner(System.in);
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
 
-    // write ur code here
-    int x = scn.nextInt();
+		// write ur code here
+		int x = scn.nextInt();
 
-    for(int ja = 1; ja <= 10; ja++){
-        System.out.println(x + " * " + ja + " = " + (x * ja));
-    }
+		for (int ja = 1; ja <= 10; ja++) {
+			System.out.println(x + " * " + ja + " = " + (x * ja));
+		}
 
-  }
+	}
 }
 /*
 

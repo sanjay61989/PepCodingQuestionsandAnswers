@@ -40,10 +40,7 @@ public class D_GetMazePaths {
 }
 
 /*
-Sample Input
-3
-3
-Sample Output
+Sample Output for 3x3
 [hhvv, hvhv, hvvh, vhhv, vhvh, vvhh]
 
 */

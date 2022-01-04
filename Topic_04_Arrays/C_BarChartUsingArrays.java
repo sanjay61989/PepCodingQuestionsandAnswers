@@ -1,7 +1,6 @@
 package Topic_04_Arrays;
 
 import java.util.Scanner;
-
 public class C_BarChartUsingArrays {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
@@ -10,7 +9,6 @@ public class C_BarChartUsingArrays {
 		for (int i = 0; i < n; i++) {
 			a[i] = s.nextInt();
 		}
-
 		printBarChart(a);
 	}
 

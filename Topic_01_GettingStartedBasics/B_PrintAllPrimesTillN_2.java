@@ -1,7 +1,6 @@
 package Topic_01_GettingStartedBasics;
 
 import java.util.*;
-
 public class B_PrintAllPrimesTillN_2  {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);

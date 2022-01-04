@@ -1,7 +1,6 @@
 package Topic_01_GettingStartedBasics;
 
 import java.util.Scanner;
-
 public class F_RotateANumber {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);

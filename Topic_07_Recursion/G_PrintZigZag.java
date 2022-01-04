@@ -16,11 +16,11 @@ public class G_PrintZigZag {
 		if (n <= 0) {
 			return;
 		}
-		System.out.print(n+" ");
+		System.out.print(n + " ");
 		printZigZag(n - 1);
-		System.out.print(n+" ");
+		System.out.print(n + " ");
 		printZigZag(n - 1);
-		System.out.print(n+" ");
+		System.out.print(n + " ");
 	}
 
 }

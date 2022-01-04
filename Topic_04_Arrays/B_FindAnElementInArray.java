@@ -3,7 +3,7 @@ package Topic_04_Arrays;
 import java.util.Scanner;
 
 public class B_FindAnElementInArray {
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
 		int[] a = new int[n];
