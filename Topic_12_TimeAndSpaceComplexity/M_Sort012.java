@@ -1,7 +1,5 @@
 package Topic_12_TimeAndSpaceComplexity;
 
-import java.io.*;
-
 import java.util.*;
 
 public class M_Sort012 {

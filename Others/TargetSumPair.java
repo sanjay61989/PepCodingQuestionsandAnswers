@@ -13,7 +13,7 @@ public class TargetSumPair {
 		}
 
 		// sort
-		Arrays.sort(arr); //nlogn
+		Arrays.sort(arr); // nlogn
 
 		// meet in the middle
 		int left = 0;
