@@ -5,6 +5,7 @@ import java.util.*;
 public class PepLinkedList {
 
 	public static class Node {
+
 		int data;
 		Node next;
 
@@ -33,11 +34,10 @@ public class PepLinkedList {
 				temp = temp.next;
 			}
 			System.out.println();
-
-			//			for (Node temp = head; temp != null; temp = temp.next) {
-			//				System.out.print(temp.data + " ");
-			//			}
-			//			System.out.print(temp.data + " ");
+			// for (Node temp = head; temp != null; temp = temp.next) {
+			// System.out.print(temp.data + " ");
+			// }
+			// System.out.print(temp.data + " ");
 
 		}
 
@@ -50,7 +50,6 @@ public class PepLinkedList {
 			} else {
 				return head.data;
 			}
-
 		}
 
 		// O(1)
@@ -62,7 +61,6 @@ public class PepLinkedList {
 			} else {
 				return tail.data;
 			}
-
 		}
 
 		// O(n)
@@ -85,13 +83,11 @@ public class PepLinkedList {
 
 		// O(n)
 		public Node getAt2(int idx) {
-
 			Node temp = head;
 			for (int i = 0; i < idx; i++) {
 				temp = temp.next;
 			}
 			return temp;
-
 		}
 
 		// O(1)
@@ -109,7 +105,7 @@ public class PepLinkedList {
 		}
 
 		// O(1)
-		//1st PG
+		// 1st PG
 		public void addLast(int val) {
 			Node node = new Node(val);
 			if (size == 0) {
@@ -144,7 +140,7 @@ public class PepLinkedList {
 		}
 
 		// O(1)
-		//3rd PG
+		// 3rd PG
 		public void removeFirst() {
 			if (size == 0) {
 				System.out.println("List is empty");
@@ -158,7 +154,6 @@ public class PepLinkedList {
 
 		// O(n)
 		public void removeLast() {
-
 			if (size == 0) {
 				System.out.println("Empty List");
 			} else if (size == 1) {
@@ -172,7 +167,6 @@ public class PepLinkedList {
 				temp.next = null;
 			}
 			size--;
-
 		}
 
 		// O(n)
@@ -186,7 +180,6 @@ public class PepLinkedList {
 			} else if (idx < 0 || idx >= size) {
 				System.out.println("Invalid Arguments");
 			} else {
-
 				Node temp = head;
 				for (int i = 0; i < idx - 1; i++) {
 					temp = temp.next;
@@ -194,7 +187,6 @@ public class PepLinkedList {
 
 				temp.next = temp.next.next;
 				size--;
-
 			}
 		}
 
@@ -213,13 +205,11 @@ public class PepLinkedList {
 			}
 
 			return slow.data;
-
 		}
 
 		// O(n)
 		// middle of linked list
 		public int getMid() {
-
 			Node fast = head;
 			Node slow = head;
 
@@ -230,12 +220,10 @@ public class PepLinkedList {
 			}
 
 			return slow.data;
-
 		}
 
 		// O(n^2)
 		public void reverseIteratively() {
-
 			int l = 0;
 			int h = size - 1;
 			while (l < h) {
@@ -247,7 +235,6 @@ public class PepLinkedList {
 				l++;
 				h--;
 			}
-
 		}
 
 		// O(n)
@@ -269,7 +256,6 @@ public class PepLinkedList {
 		}
 
 		public LinkedList mergeTwoSortedList(LinkedList l1, LinkedList l2) {
-
 			LinkedList list = new LinkedList();
 			Node one = l1.head;
 			Node two = l2.head;
@@ -295,7 +281,6 @@ public class PepLinkedList {
 			}
 
 			return list;
-
 		}
 
 		public LinkedList mergeSort(Node head, Node tail) {
@@ -313,7 +298,6 @@ public class PepLinkedList {
 
 			LinkedList sl = mergeTwoSortedList(fsl, ssl);
 			return sl;
-
 		}
 
 		public Node midNode(Node head, Node tail) {
@@ -345,7 +329,6 @@ public class PepLinkedList {
 		}
 
 		public void removeDuplicates2() {
-
 			if (size == 1) {
 				return;
 			}
@@ -361,17 +344,14 @@ public class PepLinkedList {
 			}
 
 			tail = temp;
-
 		}
 
 		// arrange all odd elements first then even.
 		public void oddEven() {
-
 			Node i = head;
 			Node j = head;
 
 			while (i != null) {
-
 				if (i.data % 2 == 0) {
 					i = i.next;
 				} else {
@@ -380,16 +360,12 @@ public class PepLinkedList {
 					j.data = temp;
 					i = i.next;
 					j = j.next;
-
 				}
-
 			}
-
 		}
 
 		// O(n)
 		public void oddEven2() {
-
 			LinkedList odd = new LinkedList();
 			LinkedList even = new LinkedList();
 
@@ -417,15 +393,12 @@ public class PepLinkedList {
 				this.tail = even.tail;
 				this.size = even.size;
 			}
-
 		}
 
 		// O(n)
 		public void kReverse(int k) {
-
 			LinkedList pre = null;
 			while (this.size > 0) {
-
 				LinkedList curr = new LinkedList();
 
 				if (this.size >= k) {
@@ -441,7 +414,6 @@ public class PepLinkedList {
 						this.removeFirst();
 						curr.addLast(data);
 					}
-
 				}
 
 				if (pre == null) {
@@ -451,12 +423,10 @@ public class PepLinkedList {
 					pre.tail = curr.tail;
 					pre.size += curr.size;
 				}
-
 			}
 			this.head = pre.head;
 			this.tail = pre.tail;
 			this.size = pre.size;
-
 		}
 
 		// you have to display list in reverse without changing the data.
@@ -466,14 +436,12 @@ public class PepLinkedList {
 		}
 
 		private void displayReverseHelper(Node node) {
-
 			if (node == null) {
 				return;
 			}
 
 			displayReverseHelper(node.next);
 			System.out.print(node.data + " ");
-
 		}
 
 		// reverse using different approach.(data recursively)
@@ -482,11 +450,9 @@ public class PepLinkedList {
 		public void reverse4() {
 			rleft = head;
 			reverse4(head, 0);
-
 		}
 
 		private void reverse4(Node right, int floor) {
-
 			if (right == null) {
 				return;
 			}
@@ -500,7 +466,6 @@ public class PepLinkedList {
 
 				rleft = rleft.next;
 			}
-
 		}
 
 		// reverse list(pointer recursively)
@@ -548,7 +513,6 @@ public class PepLinkedList {
 			}
 
 			return t1.data;
-
 		}
 
 		// find list is palindrome or not.
@@ -575,26 +539,22 @@ public class PepLinkedList {
 				left = left.next;
 				return true;
 			}
-
 		}
 
 		// fold of linkedlist
-		//		Example 1
-		//		1->2->3->4->5
-		//		will fold as
-		//		1->5->2->4->3
+		// Example 1
+		// 1->2->3->4->5
+		// will fold as
+		// 1->5->2->4->3
 		// O(n)
 		Node leftNode = null;
 
 		public void fold() {
-
 			leftNode = head;
 			foldHelper(head, 0);
-
 		}
 
 		public void foldHelper(Node node, int level) {
-
 			if (node == null) {
 				return;
 			}
@@ -606,16 +566,13 @@ public class PepLinkedList {
 				node.next = nextNode;
 				leftNode = nextNode;
 			} else if (level == size / 2) {
-
 				tail = node;
 				tail.next = null;
-
 			}
-
 		}
 
-		//		1. Time complexity -> O(n)
-		//		2. Space complexity -> Recursion space, O(n)
+		// 1. Time complexity -> O(n)
+		// 2. Space complexity -> Recursion space, O(n)
 		public static LinkedList addTwoLists(LinkedList one, LinkedList two) {
 			// write your code here
 			LinkedList res = new LinkedList();
@@ -624,11 +581,9 @@ public class PepLinkedList {
 				res.addFirst(oc);
 			}
 			return res;
-
 		}
 
 		public static int addTwoListsHelper(Node one, int pv1, Node two, int pv2, LinkedList res) {
-
 			if (one == null && two == null) {
 				return 0;
 			}
@@ -648,7 +603,6 @@ public class PepLinkedList {
 				res.addFirst(newData);
 				return newCarry;
 			} else { // if both place value is equal
-
 				int oc = addTwoListsHelper(one.next, pv1 - 1, two.next, pv2 - 1, res);
 				int data = one.data + two.data + oc;
 				int newData = data % 10;
@@ -656,12 +610,10 @@ public class PepLinkedList {
 				res.addFirst(newData);
 				return newCarry;
 			}
-
 		}
 
 		// delete node without head pointer.
 		public static void deleteNode(Node node) {
-
 			// you have given the node ,not the head you have to delete that node from
 			// list.
 
@@ -670,11 +622,9 @@ public class PepLinkedList {
 
 			node.data = node.next.data;
 			node.next = node.next.next;
-
 		}
 
 		public static Node pairwiseSwap(Node head) {
-
 			Node temp = head;
 
 			while (temp != null && temp.next != null) {
@@ -686,29 +636,23 @@ public class PepLinkedList {
 			}
 
 			return head;
-
 		}
 
 		// multiply each node by 3.
 		public void multiplyBy3() {
-
 			// Node rr = head;
 
 			int Oldcarry = multiplyBy3(head);
 			if (Oldcarry > 0) {
-
 				Node node = new Node(Oldcarry);
 				node.next = head;
 				head = node;
-
 			}
-
 			// this.head = rr;
 
 		}
 
 		public int multiplyBy3(Node head) {
-
 			if (head == null) {
 				return 0;
 			}
@@ -718,13 +662,10 @@ public class PepLinkedList {
 			head.data = (carry + t) % 10;
 			carry = (carry + t) / 10;
 			return carry;
-
 		}
-
 	}
 
 	public static void main(String[] args) {
-
 		LinkedList list = new LinkedList();
 		list.addFirst(10);
 		list.addFirst(20);
@@ -759,7 +700,5 @@ public class PepLinkedList {
 
 		LinkedList newList = list.mergeSort(list.head, list.tail);
 		newList.display();
-
 	}
-
 }

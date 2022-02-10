@@ -65,7 +65,7 @@ if ($files.Count -gt 0) {
   $filename = $docPath;
   $doc.SaveAs([REF]$filename)
   $doc.close();
-  $doc.close([ref]$wdDoNotSaveChanges)
+  # $doc.close([ref]$wdDoNotSaveChanges)
 
   $word.Quit()
 }

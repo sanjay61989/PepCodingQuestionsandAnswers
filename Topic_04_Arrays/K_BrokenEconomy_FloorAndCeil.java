@@ -1,5 +1,4 @@
 package Topic_04_Arrays;
-import java.io.*;
 import java.util.*;
 
 public class K_BrokenEconomy_FloorAndCeil{
