@@ -10,7 +10,7 @@ foreach ($f in $files) {
     if ($type -eq [System.IO.DirectoryInfo] ) {        
         $name = $f.Name;
         $isSelect = $name -eq $selectedFolder
-        # $isSelect = $true
+        $isSelect = $true
         
         if ($isSelect) {
             Write-Host $name
@@ -22,3 +22,6 @@ foreach ($f in $files) {
 
 # start "D:\DSA\PepCodingQuestionsandAnswers\Code Prints\PDF's\"
 # start "D:\DSA\PepCodingQuestionsandAnswers\Code Prints\PDF's\Topic_04_Arrays.pdf"
+
+
+Copy-Item "D:\DSA\PepCodingQuestionsandAnswers" -Destination "L:\My Drive\DSA\PepCodingQuestionsandAnswers" -Recurse
