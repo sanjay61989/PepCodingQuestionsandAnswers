@@ -10,8 +10,7 @@ public class PracticeGenericTree {
             this.data = data;
         }
 
-        public Node() {
-        }
+        public Node() {}
 
         int data;
         ArrayList<Node> children = new ArrayList<>();
@@ -67,7 +66,8 @@ public class PracticeGenericTree {
         int max = node.data;
         for (Node n : node.children) {
             int data = max(n);
-            if (data > max) max = data;
+            if (data > max)
+                max = data;
         }
         return max;
     }
@@ -200,7 +200,8 @@ public class PracticeGenericTree {
         }
         for (Node item : node.children) {
             result = find(item, data);
-            if (result) break;
+            if (result)
+                break;
         }
         return result;
     }
@@ -265,7 +266,8 @@ public class PracticeGenericTree {
             return false;
         }
         boolean res = true;
-        for (int i = 0, j = node2.children.size() - 1; i < node1.children.size() && j >= 0; i++, j--) {
+        for (int i = 0, j = node2.children.size() - 1; i < node1.children.size()
+                && j >= 0; i++, j--) {
             res = areMirror(node1.children.get(i), node2.children.get(j));
             if (res == false) {
                 break;
@@ -274,27 +276,23 @@ public class PracticeGenericTree {
         return res;
     }
 
-    static int dia = 0;
+    static int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, size = 0, height = -1;
 
-    public static int diameter(Node node) {
-        // write your code here
-        int dch = -1;
-        int sdch = -1;
-        for (Node n : node.children) {
-            int ch = diameter(n);
-            if (ch >= dch) {
-                sdch = dch;
-                dch = ch;
-            } else if (ch >= sdch) {
-                sdch = ch;
-            }
+    public static void multiSolver(Node node, int depth) {
+        size++;
+        if (node.data > max) {
+            max = node.data;
         }
-        int cand = dch + sdch + 2;
-        if (cand > dia) {
-            dia = cand;
+        if (node.data < min) {
+            min = node.data;
         }
-        dch += 1;
-        return dch;
+        if (depth > height) {
+            height = depth;
+        }
+        for (Node item : node.children) {
+            multiSolver(item, depth + 1);
+        }
+        // height += 1;
     }
 
     static Node predecessor;
@@ -318,25 +316,6 @@ public class PracticeGenericTree {
         }
     }
 
-    static int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, size = 0, height = -1;
-
-    public static void multiSolver(Node node, int depth) {
-        size++;
-        if (node.data > max) {
-            max = node.data;
-        }
-        if (node.data < min) {
-            min = node.data;
-        }
-        if (depth > height) {
-            height = depth;
-        }
-        for (Node item : node.children) {
-            multiSolver(item, depth + 1);
-        }
-        // height += 1;
-    }
-
     static int ceil;
     static int floor;
 
@@ -354,6 +333,62 @@ public class PracticeGenericTree {
         for (Node child : node.children) {
             ceilAndFloor(child, data);
         }
+    }
+
+    public static int kthLargest(Node node, int k) {
+        int i = 0;
+        floor = Integer.MIN_VALUE;
+        int factor = Integer.MAX_VALUE;
+        while (i < k) {
+            ceilAndFloor(node, factor);
+            factor = floor;
+            floor = Integer.MIN_VALUE;
+            i++;
+        }
+
+        return factor;
+    }
+
+    static int mSum = Integer.MIN_VALUE;
+    static int mSumNode = Integer.MIN_VALUE;
+
+    public static int nodeWithMaximumSubtreeSum(Node node) {
+        int sum = node.data;
+
+        for (Node child : node.children) {
+            int cstSum = nodeWithMaximumSubtreeSum(child);
+            sum += cstSum;
+        }
+
+        if (sum > mSum) {
+            mSum = sum;
+            mSumNode = node.data;
+        }
+
+        return sum;
+    }
+
+    static int dia = 0;
+
+    public static int diameter(Node node) {
+        // write your code here
+        int dch = -1;
+        int sdch = -1;
+        for (Node n : node.children) {
+            int ch = diameter(n);
+            if (ch >= dch) {
+                sdch = dch;
+                dch = ch;
+            } else if (ch >= sdch) {
+                sdch = ch;
+            }
+        }
+        int cand = dch + sdch + 2;
+        if (cand > dia) {
+            dia = cand;
+        }
+        dch += 1;
+        return dch;
     }
 
     static class Pair {
@@ -409,68 +444,39 @@ public class PracticeGenericTree {
         return res;
     }
 
-    public static int kthLargest(Node node, int k) {
-        int i = 0;
-        floor = Integer.MIN_VALUE;
-        int factor = Integer.MAX_VALUE;
-        while (i < k) {
-            ceilAndFloor(node, factor);
-            factor = floor;
-            floor = Integer.MIN_VALUE;
-            i++;
-        }
-
-        return factor;
-    }
-
-
-    static int mSum = Integer.MIN_VALUE;
-    static int mSumNode = Integer.MIN_VALUE;
-
-    public static int nodeWithMaximumSubtreeSum(Node node) {
-        int sum = node.data;
-
-        for (Node child : node.children) {
-            int cstSum = nodeWithMaximumSubtreeSum(child);
-            sum += cstSum;
-        }
-
-        if (sum > mSum) {
-            mSum = sum;
-            mSumNode = node.data;
-        }
-
-        return sum;
-    }
-
     public static void main(String[] args) {
-        String[] values = "10 20 50 -1 60 -1 -1 30 70 -1 80 110 130 150 170 -1 -1 -1 -1 120 140 160 180 190 -1 -1 -1 -1 -1 -1 90 -1 -1 40 100 -1 -1 -1".split(" ");
+        String[] values =
+                "10 20 50 -1 60 -1 -1 30 70 -1 80 110 130 150 170 -1 -1 -1 -1 120 140 160 180 190 -1 -1 -1 -1 -1 -1 90 -1 -1 40 100 -1 -1 -1"
+                        .split(" ");
         int[] arr = new int[values.length];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Integer.parseInt(values[i]);
         }
-        int arr1[] = {10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1, 40, 100, -1, -1, -1};
+        int arr1[] = {10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1, -1, 90, -1, -1,
+                40, 100, -1, -1, -1};
         Node root = construct(arr1);
 
-        //        display(root);
-//         int size = size(root);
-//         System.out.println("Size : " + size);
-//         int max = max(root);
-//         System.out.println("Maximum : " + max);
-//         int height = height(root);
-//         System.out.println("Height : " + height);
-//         System.out.println("Level Order");
-//         levelOrder(root);
-//        System.out.println("Level Order Line Wise");
-//        levelOrderLinewise(root);
-//        int d = diameter(root);
-//        System.out.println("Diameter :" + dia);
-//        predecessorAndSuccessor(root, 90);
-//        System.out.println("Predecessor : " + predecessor.data + " Successor : " + successor.data);
-//        multiSolver(root, 0);
-//        System.out.println("Min: " + min + " Max: " + max + " Height: " + height + " Size: " + size);
-//        ceilAndFloor(root, 65);
-//        System.out.println(ceil + " " + floor);
+        // display(root);
+        // int size = size(root);
+        // System.out.println("Size : " + size);
+        // int max = max(root);
+        // System.out.println("Maximum : " + max);
+        // int height = height(root);
+        // System.out.println("Height : " + height);
+        // System.out.println("Level Order");
+        // levelOrder(root);
+        // System.out.println("Level Order Line Wise");
+        // levelOrderLinewise(root);
+        // int d = diameter(root);
+        // System.out.println("Diameter :" + dia);
+        // predecessorAndSuccessor(root, 90);
+        // System.out.println("Predecessor : " + predecessor.data + " Successor : " +
+        // successor.data);
+        // multiSolver(root, 0);
+        // System.out.println("Min: " + min + " Max: " + max + " Height: " + height + " Size: " +
+        // size);
+        // ceilAndFloor(root, 65);
+        // System.out.println(ceil + " " + floor);
         IterativePreandPostOrder(root);
         boolean res = areSimilar(root, root);
         System.out.println(res);
