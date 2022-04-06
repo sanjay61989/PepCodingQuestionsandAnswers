@@ -23,9 +23,9 @@ class Practice_BinaryTree {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         // int n = Integer.parseInt(br.readLine());
-        String input = "50 25 12 n n 37 30 n n n 75 62 n 70 n n 87 n n";
-        String[] values = input.split(" ");
-//        String[] values = "50 25 12 n n 37 30 n n 40 n n 75 62 60 n n 70 n n 87 n n".split(" ");
+        // String input = "50 25 12 n n 37 30 n n n 75 62 n 70 n n 87 n n";
+        // String[] values = input.split(" ");
+        String[] values = "50 25 12 n n 37 30 n n 40 n n 75 62 60 n n 70 n n 87 n n".split(" ");
 
         Integer[] arr = new Integer[values.length];
         for (int i = 0; i < values.length; i++) {
@@ -79,6 +79,7 @@ class Practice_BinaryTree {
         System.out.println("Remove Leaves in Binary Tree");
 
         Node tempRoot = tree.construct(arr);
+
         Node root1 = tree.removeLeaves(tempRoot);
         tree.display(root1);
 
